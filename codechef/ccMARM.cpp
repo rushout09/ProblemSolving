@@ -13,7 +13,14 @@ int main(){
         }
         ll rem =  k%n;
         ll r = k/n;
-        r = r%6;
+        if(r>=3){
+            for(ll i=0;i<3;i++){
+                for(ll j=0;j<n;j++){
+                    arr[j] = arr[j] ^ arr[n-j-1];
+                }
+            }
+        }
+        r=r%3;
         for(ll i=0;i<r;i++){
             for(ll j=0;j<n;j++){
                 arr[j] = arr[j] ^ arr[n-j-1];
